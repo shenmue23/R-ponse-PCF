@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le verdict des urnes - Témoignage d'un militant insoumis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        /* NOUVELLE PALETTE PERSONNELLE (INDIGO & AMBRE) */
+                        'perso-primary': '#4F46E5', /* Indigo profond */
+                        'perso-accent': '#F59E0B',  /* Ambre/Orange vif */
+                        'perso-dark': '#0F172A',    /* Bleu nuit très sombre */
+                        'perso-light': '#F8FAFC',   /* Gris très clair */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        impact: ['Oswald', 'Arial Black', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'perso': '10px 10px 0px 0px rgba(15,23,42,1)',
+                        'perso-accent': '10px 10px 0px 0px rgba(245,158,11,1)',
+                        'perso-primary': '10px 10px 0px 0px rgba(79,70,229,1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Oswald:wght@700&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; scroll-behavior: smooth; }
+        
+        .section-title { font-family: 'Oswald', sans-serif; text-transform: uppercase; line-height: 0.95; }
+        
+        /* Formes asymétriques */
+        .perso-angle-bottom { clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%); }
+        @media (min-width: 768px) {
+            .perso-angle-bottom { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+        }
+        .perso-skew { transform: skewX(-10deg); }
+        .perso-marker { background: linear-gradient(180deg, rgba(255,255,255,0) 60%, #F59E0B 60%); display: inline; }
+        
+        /* Animations d'apparition */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .highlight-box { border-left: 8px solid #4F46E5; background: #EEF2FF; padding: 2rem; }
+    </style>
+</head>
+<body class="text-perso-dark">
+
+    <!-- NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full bg-white z-50 py-4 px-6 flex flex-col md:flex-row justify-between items-center shadow-sm gap-4 md:gap-0">
+        <div class="flex items-center gap-4">
+            <!-- EMPLACEMENT POUR TA PHOTO DE PROFIL -->
+            <img src="https://scontent-cdg4-3.xx.fbcdn.net/v/t39.30808-6/515086054_30272058739107641_8113012018619734284_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=ZNA868sTXvcQ7kNvwHKSSpP&_nc_oc=Adpbx3F8qICIUNYzpYMXaFK3GZqlUOHyJra9pdWXhTSorrkTqPtA6-oDHq691tNHDEQ&_nc_zt=23&_nc_ht=scontent-cdg4-3.xx&_nc_gid=nFYn7LGn9hR78LDCgYrB0A&_nc_ss=7a3a8&oh=00_Af2YCmRMiGJXRCnY0q8BaPPCTWhQWmu_BuBbXg3sxP4b7w&oe=69DC165F" onerror="this.src='https://ui-avatars.com/api/?name=Militant+Insoumis&background=4F46E5&color=fff&size=150'" alt="Ma Photo" class="w-16 h-16 rounded-full object-cover shadow-sm border-2 border-perso-primary">
+            <div class="flex flex-col leading-none">
+                <span class="font-black uppercase text-xl tracking-tight text-perso-dark">Témoignage Militant</span>
+                <span class="text-xs font-bold text-perso-accent uppercase tracking-widest mt-1">Châteauroux</span>
+            </div>
+        </div>
+        
+        <!-- BOUTONS D'ACTION -->
+        <div class="flex items-center gap-4">
+            <a href="#publication-pcf" class="border-2 border-perso-dark text-perso-dark font-black uppercase text-xs px-4 py-3 hover:bg-perso-dark hover:text-white transition-all hidden md:block">
+                Lire le post du PCF
+            </a>
+            <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0cxg8we2QmSrAmswsvtSpFtStSgJPHYhnFFSk3g8NDJ8YLzXmi25GAPHdz8jvSGZGl&id=100064804236611" 
+               target="_blank" 
+               class="bg-perso-primary text-white font-black uppercase text-xs px-6 py-3 hover:bg-perso-dark transition-colors shadow-perso-primary">
+                Voir la publication originale
+            </a>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO -->
+    <section class="relative pt-40 pb-32 md:pb-48 perso-angle-bottom bg-white">
+        <div class="absolute right-0 top-0 w-1/2 h-full bg-perso-light" style="clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%); z-index: 0;"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col gap-8">
+                
+                <div class="inline-block bg-perso-accent text-white font-black text-xs px-4 py-2 uppercase tracking-widest self-start shadow-md">
+                    Réponse publique
+                </div>
+                
+                <h1 class="section-title text-6xl md:text-8xl text-perso-dark tracking-tighter">
+                    LE VERDICT <br>
+                    <span class="text-perso-primary">DES URNES.</span>
+                </h1>
+                
+                <div class="perso-skew inline-block bg-perso-dark px-8 py-3 shadow-perso self-start mt-2">
+                    <h2 class="section-title text-2xl md:text-4xl text-white italic transform skew-x-12">
+                        LA VÉRITÉ SUR LES NÉGOCIATIONS.
+                    </h2>
+                </div>
+
+                <p class="text-xl md:text-3xl font-bold text-gray-700 leading-relaxed max-w-4xl mt-8">
+                    Quelle tentative désespérée de faire oublier le verdict des urnes ! Vous utilisez la même ficelle, usée jusqu'à la corde par le Parti Socialiste : crier au loup et répéter en boucle <span class="italic text-perso-primary">« c’est la faute à Mélenchon, c’est la faute à LFI »</span>, tout cela pour refuser d’assumer les conséquences de votre propre <span class="perso-marker px-1">stratégie de la défaite.</span>
+                </p>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: LE CŒUR DU MESSAGE -->
+    <section class="py-20 px-4 bg-perso-light">
+        <div class="max-w-4xl mx-auto space-y-12 reveal">
+            
+            <!-- Bloc PS -->
+            <div class="highlight-box shadow-lg transform hover:-translate-y-1 transition-transform">
+                <div class="flex items-start gap-4">
+                    <div class="text-4xl">❌</div>
+                    <div>
+                        <h3 class="text-2xl font-black uppercase text-perso-dark mb-3">L'Alliance avec le PS</h3>
+                        <p class="text-lg font-medium leading-relaxed text-gray-800">
+                            Je relève que vous avez osé dérouler le tapis rouge en offrant la deuxième place de votre liste au PS. Ce même PS qui a méthodiquement renié l'accord du NFP en refusant de censurer les gouvernements macronistes à l’Assemblée, allant jusqu'à voter favorablement le terrible budget 2026 !
+                        </p>
+
+                        <!-- PREUVE LOCALE PS -->
+                        <div class="mt-5 p-5 bg-white border-l-4 border-perso-dark shadow-md">
+                            <span class="inline-block bg-perso-dark text-white text-xs font-black px-2 py-1 uppercase mb-2">Complicité locale assumée</span>
+                            <p class="text-sm font-medium text-gray-700 leading-relaxed">
+                                Et ne croyez pas qu'il s'agisse uniquement d'une dérive parisienne. Sur notre propre territoire, <strong>François Avisseau</strong>, premier secrétaire fédéral du PS de l'Indre, justifie publiquement cette soumission au gouvernement macroniste sur les ondes de France Bleu.
+                            </p>
+                            <a href="https://www.francebleu.fr/emissions/l-invite-de-ici-matin-berry/gouvernement-on-ne-signe-pas-un-cheque-en-blanc-les-arguments-pour-censurer-ne-manquent-pas-dit-le-ps-de-l-indre-6026519" target="_blank" class="inline-flex items-center gap-2 mt-3 text-perso-primary font-black uppercase text-xs hover:text-perso-accent transition-colors">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z"/></svg>
+                                Écouter son interview sur ICI Berry
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- CITATION PROGRAMME NFP -->
+            <div class="mt-6 mb-12 relative">
+                <blockquote class="bg-white p-6 md:p-8 border-l-8 border-perso-accent shadow-xl text-perso-dark transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                    <svg class="w-8 h-8 text-gray-300 mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                    <p class="text-xl italic font-medium leading-relaxed">
+                        « L’histoire de notre pays nous appelle. [...] Nous proposons <span class="bg-yellow-200 text-perso-dark px-1 font-bold">un programme de rupture avec la politique d’Emmanuel Macron.</span> Nous en finirons avec la brutalisation et la maltraitance des années Macron. »
+                    </p>
+                    <footer class="mt-4 flex items-center justify-between border-t border-gray-200 pt-4">
+                        <span class="text-sm font-black uppercase tracking-widest text-perso-accent">— Contrat de législature, Nouveau Front Populaire</span>
+                    </footer>
+                </blockquote>
+                <div class="mt-4">
+                    <a href="https://lafranceinsoumise.fr/wp-content/uploads/2024/06/Programme-nouveaufrontpopulaire.pdf" target="_blank" class="inline-flex items-center gap-3 text-perso-dark font-black uppercase text-xs hover:text-perso-primary transition-colors">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z"/></svg>
+                        Lire le programme national fondateur (PDF)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bloc Lettre cachée -->
+            <div class="bg-white p-8 md:p-10 shadow-perso border-t-8 border-perso-accent">
+                <h3 class="text-2xl font-black uppercase text-perso-dark mb-4">Un procédé malhonnête</h3>
+                <p class="text-xl leading-relaxed text-gray-700 font-medium">
+                    De plus, votre procédé est profondément malhonnête. Pourquoi n’avez-vous pas publié également <span class="font-black text-perso-dark">la lettre de LFI de plusieurs pages ?</span> Celle qui détaillait point par point ses arguments pour vous faire revenir sur votre décision de rejeter ses lignes rouges ?
+                </p>
+            </div>
+
+            <!-- Paragraphes de développement -->
+            <div class="space-y-8 px-4 md:px-8 border-l-4 border-gray-300">
+                <p class="text-lg leading-relaxed text-gray-800">
+                    <strong class="text-perso-primary text-xl">Faut-il rappeler la réalité nationale ?</strong> La France Insoumise est à l’origine de la NUPES et du NFP. Au niveau national, lors des législatives, LFI a fait preuve d’une responsabilité immense en accordant à ses partenaires bien plus de places que leur poids électoral ne leur permettait d’espérer.
+                </p>
+                
+                <p class="text-lg leading-relaxed text-gray-800">
+                    Mais à Châteauroux, la logique a été inverse. Si LFI avait appliqué les règles de projection mathématiques, elle aurait dû légitimement prétendre à <strong class="text-perso-dark">5 places dans les 8 premiers de la liste</strong>. À la table des négociations, vous avez pourtant refusé d'en accorder à LFI ne serait-ce qu’une seule place éligible qu'elle demandait en geste de compromis.
+                </p>
+
+                <div class="bg-gray-900 text-white p-6 my-8 shadow-xl">
+                    <p class="text-lg leading-relaxed italic">
+                        "C’est de l’ostracisme pur et simple, à l'image de votre grande réunion pour la Palestine ou de vos tentatives de faire oublier que les rassemblements hebdomadaires dans cette lutte sont à l'initiative de la jeunesse Insoumise."
+                    </p>
+                </div>
+
+                <p class="text-lg leading-relaxed text-gray-800">
+                    <strong class="bg-perso-dark text-white px-2 py-1 uppercase tracking-wide shadow-sm">« Du factuel, rien que du factuel »</strong>, n’est-ce pas ? Le courriel que vous publiez aujourd’hui n’était rien d’autre qu’une fin de non-recevoir polie ; <strong class="text-perso-accent">une tentative de tordre le bras de LFI</strong> pour la forcer à valider une stratégie dont LFI refusait les compromissions.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: LE VERDICT 13% ET LE POST FACEBOOK -->
+    <section class="py-24 px-4 bg-perso-dark text-white border-y-8 border-perso-primary" id="publication-pcf">
+        <div class="max-w-6xl mx-auto reveal flex flex-col lg:flex-row gap-12 items-center">
+            
+            <div class="lg:w-1/2 space-y-8">
+                <h2 class="section-title text-5xl md:text-7xl italic">
+                    VOS <span class="text-perso-accent">13 %</span>
+                </h2>
+                <p class="text-xl font-bold leading-relaxed text-gray-300">
+                    Je ne m’aventurerai pas à publier le courrier de LFI en retour pour rentrer dans votre petit jeu de cour de récréation. La seule réponse qui vaille, ce sont vos 13 % et l’analyse lucide de la Nouvelle République qui a ridiculisé votre stratégie.
+                </p>
+                
+                <!-- CITATION LÉGALE NR DE LA DEFAITE -->
+                <div class="mt-10 relative transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                    <div class="absolute -inset-2 bg-perso-primary opacity-20 blur-sm z-0"></div>
+                    <blockquote class="relative z-10 bg-white p-6 md:p-8 border-l-8 border-perso-primary shadow-2xl text-perso-dark">
+                        <svg class="w-10 h-10 text-gray-300 mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        <p class="text-xl italic font-medium leading-relaxed">
+                            « ...<span class="bg-yellow-200 text-perso-dark px-1 font-bold">la gauche castelroussine s'est perdue dans d'interminables palabres à huis clos.</span> [...] Faute de figure rassembleuse, la gauche se raccrochait d'ailleurs à des formules : liste sans tête de liste, candidats pas candidats... » 
+                        </p>
+                        <footer class="mt-6 flex items-center justify-between border-t border-gray-200 pt-4">
+                            <span class="text-sm font-black uppercase tracking-widest text-perso-primary">— La Nouvelle République</span>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- BOUTON VERS L'ARTICLE WEB DE LA NR -->
+                <div class="mt-8">
+                    <a href="https://www.lanouvellerepublique.fr/chateauroux/ils-ne-boxaient-pas-dans-la-meme-categorie-le-recit-de-l-echec-cuisant-des-opposants-de-gil-averous-aux-municipales-a-chateauroux-1773677391" target="_blank" class="inline-flex items-center gap-3 bg-perso-accent text-perso-dark font-black uppercase text-sm px-6 py-4 hover:bg-white transition-all shadow-[6px_6px_0px_0px_rgba(255,255,255,0.2)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.8)] transform hover:-translate-y-1">
+                        <!-- Icône Lien externe -->
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z"/></svg>
+                        Lire l'article complet sur lanouvellerepublique.fr
+                    </a>
+                </div>
+
+                <div class="bg-white/10 p-6 border-l-4 border-perso-accent mt-10">
+                    <p class="text-lg font-black uppercase tracking-wide leading-loose">
+                        C'est votre défaite, acceptez-la, <br class="md:hidden">
+                        <strong class="bg-perso-accent text-perso-dark px-3 py-1 shadow-sm inline-block transform -skew-x-3 mt-2 md:mt-0">« le sujet SERA ainsi clos »</strong>.
+                    </p>
+                    <p class="text-md mt-4 text-gray-300">
+                        Les résultats nationaux le démontrent de manière implacable : vous ne pouvez plus faire sans LFI. La France Insoumise est aujourd'hui le premier parti de gauche, une force politique organisée et structurée. Le temps où vous pouviez compter sur la sympathie de LFI pour jouer les « bons militants sympas », corvéables à merci et voués aux seconds rôles, est définitivement mort.
+                    </p>
+                </div>
+            </div>
+
+            <!-- INTEGRATION DU POST FACEBOOK DU PCF -->
+            <div class="lg:w-1/2 w-full flex justify-center bg-white p-4 rounded-xl shadow-2xl">
+                <div class="w-full max-w-[500px] overflow-hidden">
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0cxg8we2QmSrAmswsvtSpFtStSgJPHYhnFFSk3g8NDJ8YLzXmi25GAPHdz8jvSGZGl%26id%3D100064804236611&show_text=true&width=500" 
+                            width="100%" 
+                            height="563" 
+                            style="border:none;overflow:hidden; max-width: 500px;" 
+                            scrolling="no" 
+                            frameborder="0" 
+                            allowfullscreen="true" 
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: L'APPEL AU RASSEMBLEMENT -->
+    <section class="py-24 px-4 bg-white text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto reveal relative z-10">
+            <h2 class="section-title text-5xl md:text-7xl text-perso-dark mb-10 uppercase">
+                Préparer <span class="text-perso-primary">2027</span>
+            </h2>
+            <p class="text-2xl font-bold text-gray-700 leading-relaxed mb-8">
+                Pour autant, je souhaite nous orienter vers le rassemblement, comme LFI n'a de cesse de le faire à chaque occasion.
+            </p>
+
+            <!-- REVUE DE PRESSE 2027 (PREUVES) DEPLACEE ICI -->
+            <div class="mt-8 mb-10 text-left bg-gray-50 p-6 md:p-8 border-2 border-gray-200 shadow-inner">
+                <h3 class="text-xl font-black uppercase text-perso-dark mb-6 flex items-center gap-3">
+                    <svg class="w-6 h-6 text-perso-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                    La preuve au niveau national
+                </h3>
+                <div class="space-y-4">
+                    <!-- Article 1 : LFI propose des règles d'alliance -->
+                    <a href="https://www.20minutes.fr/politique/4205381-20260309-municipales-2026-lfi-pose-regles-alliance-second-tour-prone-fusion-technique" target="_blank" class="block p-4 bg-white border-l-4 border-perso-primary shadow-sm hover:shadow-md hover:translate-x-1 transition-all">
+                        <span class="text-[10px] font-black uppercase tracking-widest text-perso-primary mb-1 block">Notre méthode : La clarté</span>
+                        <p class="font-bold text-gray-800 text-sm md:text-base">Municipales : LFI pose ses règles d'alliance et prône la fusion technique (20 Minutes)</p>
+                    </a>
+                    
+                    <!-- Article 2 : Bompard appelle à la candidature commune -->
+                    <a href="https://www.franceinfo.fr/elections/presidentielle/manuel-bompard-appelle-a-une-candidature-commune-de-lfi-des-ecologistes-et-des-communistes-a-la-presidentielle-2027_7912961.html" target="_blank" class="block p-4 bg-white border-l-4 border-perso-primary shadow-sm hover:shadow-md hover:translate-x-1 transition-all">
+                        <span class="text-[10px] font-black uppercase tracking-widest text-perso-primary mb-1 block">Notre main tendue : L'Union</span>
+                        <p class="font-bold text-gray-800 text-sm md:text-base">M. Bompard appelle à une candidature commune pour la présidentielle 2027 (France Info)</p>
+                    </a>
+
+                    <!-- Article 3 : Roussel refuse -->
+                    <a href="https://www.rtl.fr/actu/politique/presidentielle-2027-fabien-roussel-refuse-la-main-tendue-de-lfi-et-qualifie-jean-luc-melenchon-de-pire-candidat-de-second-tour-7900620678" target="_blank" class="block p-4 bg-red-50 border-l-4 border-red-500 shadow-sm hover:shadow-md hover:translate-x-1 transition-all mt-6 relative">
+                        <div class="absolute -left-3 top-1/2 transform -translate-y-1/2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white font-black text-xs shadow-md">!</div>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-red-600 mb-1 block ml-4">Leur réponse : Le sectarisme</span>
+                        <p class="font-bold text-gray-800 text-sm md:text-base ml-4">F. Roussel refuse la main tendue de LFI et insulte J.-L. Mélenchon (RTL)</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CONCLUSION QUI SUIT LOGIQUEMENT LES PREUVES -->
+            <p class="text-lg text-gray-600 leading-relaxed mb-10">
+                La démonstration est faite : <strong class="text-perso-dark">la gauche ne gagne pas sans LFI et sans sa capacité à mobiliser les quartiers populaires.</strong> Acceptez-le, faisons fi du passé et tirons les leçons de ce gâchis. Les urgences sociales et les échéances de 2027 obligent LFI à reconstruire une unité populaire sincère, sur des bases de respect et de vraie rupture.
+            </p>
+
+            <div class="inline-block p-6 bg-perso-light border-2 border-dashed border-gray-300">
+                <p class="text-xl font-black uppercase text-perso-dark tracking-widest italic">
+                    "Ce ne sont là que les mots d’un militant insoumis,<br> animés par ce vœu sincère et tenace."
+                </p>
+            </div>
+        </div>
+        
+        <!-- Motif de fond -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-[0.03] text-[20rem] font-black pointer-events-none select-none">
+            RÉPONSE
+        </div>
+    </section>
+
+    <!-- FOOTER & DISCLAIMER -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <div class="w-16 h-1 bg-perso-accent mx-auto mb-6"></div>
+            
+            <p class="text-lg font-black text-perso-accent uppercase tracking-widest">
+                Avertissement
+            </p>
+            <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+                Cette page, son contenu et cette réponse n'engagent que ma propre personne. Il s'agit d'une démarche strictement individuelle d'un militant insoumis et ne constitue en aucun cas une communication officielle de La France Insoumise de l'Indre (LFI 36).
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Révéler les éléments au scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Déclencher au chargement initial
+    </script>
+</body>
+</html>
